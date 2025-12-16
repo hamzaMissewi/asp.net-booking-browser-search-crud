@@ -1,0 +1,386 @@
+La génération a démarré 16/12/2025 07:54:46.
+     1>Projet "J:\projects\asp.net-nextjs\ClassLibrary1\ClassLibrary1.sln" sur
+       le nœud 1 (Clean cible(s)).
+     1>ValidateSolutionConfiguration:
+         Génération de la configuration de solution "Debug|Any CPU".
+     1>Le projet "J:\projects\asp.net-nextjs\ClassLibrary1\ClassLibrary1.sln" (
+       1) génère "J:\projects\asp.net-nextjs\ClassLibrary1\BooksApi\BooksApi.cs
+       proj" (2) sur le nœud 1 (Clean cible(s)).
+     2>C:\Users\hamza\.dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Micros
+       oft.NET.Sdk.FrameworkReferenceResolution.targets(65,5): warning NETSDK10
+       86: un FrameworkReference pour 'Microsoft.AspNetCore.App' a été inclus d
+       ans le projet. Comme ceci est implicitement référencé par le kit SDK .NE
+       T, vous n'avez généralement pas besoin de le référencer à partir de votr
+       e projet. Pour plus d'informations, consultez https://aka.ms/sdkimplicit
+       refs [J:\projects\asp.net-nextjs\ClassLibrary1\BooksApi\BooksApi.csproj]
+     2>CoreClean:
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\appsettings.json".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\BooksApi.exe".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\BooksApi.deps.json".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\BooksApi.runtimeconfig.json".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\BooksApi.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\BooksApi.pdb".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Humanizer.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Sqlite.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Microsoft.OpenApi.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Mono.TextTemplating.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\SQLitePCLRaw.core.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\System.CodeDom.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\System.Composition.AttributedModel.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\System.Composition.Convention.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\System.Composition.Hosting.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\System.Composition.Runtime.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\System.Composition.TypedParts.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+         ".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.d
+         ll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.d
+         ll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resou
+         rces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resou
+         rces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resou
+         rces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resou
+         rces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resou
+         rces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resou
+         rces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resou
+         rces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resou
+         rces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.re
+         sources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resou
+         rces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resou
+         rces.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.
+         resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.
+         resources.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dl
+         l".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dl
+         l".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dl
+         l".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dl
+         l".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dl
+         l".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dl
+         l".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dl
+         l".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dl
+         l".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources
+         .dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dl
+         l".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dl
+         l".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resourc
+         es.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resourc
+         es.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlit
+         e3.a".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so"
+         .
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dy
+         lib".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dyli
+         b".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.csproj.AssemblyReference.cache".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.GeneratedMSBuildEditorConfig.editorconfi
+         g".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.AssemblyInfoInputs.cache".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.AssemblyInfo.cs".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.csproj.CoreCompileInputs.cache".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.MvcApplicationPartsAssemblyInfo.cs".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.MvcApplicationPartsAssemblyInfo.cache".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\staticwebassets.build.json".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\staticwebassets\msbuild.build.BooksApi.props".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Books
+         Api.props".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BooksApi.
+         props".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.csproj.Up2Date".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\refint\BooksApi.dll".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.pdb".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\BooksApi.genruntimeconfig.cache".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\Books
+         Api\obj\Debug\net8.0\ref\BooksApi.dll".
+     2>Génération du projet "J:\projects\asp.net-nextjs\ClassLibrary1\BooksApi\
+       BooksApi.csproj" terminée (Clean cible(s)).
+     1>Le projet "J:\projects\asp.net-nextjs\ClassLibrary1\ClassLibrary1.sln" (
+       1) génère "J:\projects\asp.net-nextjs\ClassLibrary1\ClassLibrary1.csproj
+       " (3) sur le nœud 2 (Clean cible(s)).
+     3>CoreClean:
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\obj\D
+         ebug\net8.0\ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\obj\D
+         ebug\net8.0\ClassLibrary1.AssemblyInfoInputs.cache".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\obj\D
+         ebug\net8.0\ClassLibrary1.AssemblyInfo.cs".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\obj\D
+         ebug\net8.0\ClassLibrary1.csproj.CoreCompileInputs.cache".
+         Suppression du fichier "J:\projects\asp.net-nextjs\ClassLibrary1\obj\D
+         ebug\net8.0\ClassLibrary1.csproj.AssemblyReference.cache".
+     3>Génération du projet "J:\projects\asp.net-nextjs\ClassLibrary1\ClassLibr
+       ary1.csproj" terminée (Clean cible(s)).
+     1>Génération du projet "J:\projects\asp.net-nextjs\ClassLibrary1\ClassLibr
+       ary1.sln" terminée (Clean cible(s)).
+La génération a réussi.
+       "J:\projects\asp.net-nextjs\ClassLibrary1\ClassLibrary1.sln" (Clean cibl
+       e) (1) ->
+       "J:\projects\asp.net-nextjs\ClassLibrary1\BooksApi\BooksApi.csproj" (Cle
+       an cible) (2) ->
+       (ProcessFrameworkReferences cible) ->
+         C:\Users\hamza\.dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Micr
+       osoft.NET.Sdk.FrameworkReferenceResolution.targets(65,5): warning NETSDK
+       1086: un FrameworkReference pour 'Microsoft.AspNetCore.App' a été inclus
+        dans le projet. Comme ceci est implicitement référencé par le kit SDK .
+       NET, vous n'avez généralement pas besoin de le référencer à partir de vo
+       tre projet. Pour plus d'informations, consultez https://aka.ms/sdkimplic
+       itrefs [J:\projects\asp.net-nextjs\ClassLibrary1\BooksApi\BooksApi.cspro
+       j]
+    1 Avertissement(s)
+    0 Erreur(s)
+Temps écoulé 00:00:00.97
+  Identification des projets à restaurer...
+C:\Users\hamza\.dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET
+.Sdk.FrameworkReferenceResolution.targets(65,5): warning NETSDK1086: un Framewo
+rkReference pour 'Microsoft.AspNetCore.App' a été inclus dans le projet. Comme
+ceci est implicitement référencé par le kit SDK .NET, vous n'avez généralement
+pas besoin de le référencer à partir de votre projet. Pour plus d'informations,
+ consultez https://aka.ms/sdkimplicitrefs [J:\projects\asp.net-nextjs\ClassLibr
+ary1\BooksApi\BooksApi.csproj]
+  Tous les projets sont à jour pour la restauration.
+  Identification des projets à restaurer...
+C:\Users\hamza\.dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET
+.Sdk.FrameworkReferenceResolution.targets(65,5): warning NETSDK1086: un Framewo
+rkReference pour 'Microsoft.AspNetCore.App' a été inclus dans le projet. Comme
+ceci est implicitement référencé par le kit SDK .NET, vous n'avez généralement
+pas besoin de le référencer à partir de votre projet. Pour plus d'informations,
+ consultez https://aka.ms/sdkimplicitrefs [J:\projects\asp.net-nextjs\ClassLibr
+ary1\BooksApi\BooksApi.csproj]
+  Tous les projets sont à jour pour la restauration.
+C:\Users\hamza\.dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET
+.Sdk.FrameworkReferenceResolution.targets(65,5): warning NETSDK1086: un Framewo
+rkReference pour 'Microsoft.AspNetCore.App' a été inclus dans le projet. Comme
+ceci est implicitement référencé par le kit SDK .NET, vous n'avez généralement
+pas besoin de le référencer à partir de votre projet. Pour plus d'informations,
+ consultez https://aka.ms/sdkimplicitrefs [J:\projects\asp.net-nextjs\ClassLibr
+ary1\BooksApi\BooksApi.csproj]
+J:\projects\asp.net-nextjs\ClassLibrary1\obj\Debug\net8.0\.NETCoreApp,Version=v
+8.0.AssemblyAttributes.cs(4,12): error CS0579: Attribut 'global::System.Runtime
+.Versioning.TargetFrameworkAttribute' en double [J:\projects\asp.net-nextjs\Cla
+ssLibrary1\ClassLibrary1.csproj]
+  BooksApi -> J:\projects\asp.net-nextjs\ClassLibrary1\BooksApi\bin\Debug\net8.
+  0\BooksApi.dll
+ÉCHEC de la build.
+C:\Users\hamza\.dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET
+.Sdk.FrameworkReferenceResolution.targets(65,5): warning NETSDK1086: un Framewo
+rkReference pour 'Microsoft.AspNetCore.App' a été inclus dans le projet. Comme
+ceci est implicitement référencé par le kit SDK .NET, vous n'avez généralement
+pas besoin de le référencer à partir de votre projet. Pour plus d'informations,
+ consultez https://aka.ms/sdkimplicitrefs [J:\projects\asp.net-nextjs\ClassLibr
+ary1\BooksApi\BooksApi.csproj]
+C:\Users\hamza\.dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET
+.Sdk.FrameworkReferenceResolution.targets(65,5): warning NETSDK1086: un Framewo
+rkReference pour 'Microsoft.AspNetCore.App' a été inclus dans le projet. Comme
+ceci est implicitement référencé par le kit SDK .NET, vous n'avez généralement
+pas besoin de le référencer à partir de votre projet. Pour plus d'informations,
+ consultez https://aka.ms/sdkimplicitrefs [J:\projects\asp.net-nextjs\ClassLibr
+ary1\BooksApi\BooksApi.csproj]
+J:\projects\asp.net-nextjs\ClassLibrary1\obj\Debug\net8.0\.NETCoreApp,Version=v
+8.0.AssemblyAttributes.cs(4,12): error CS0579: Attribut 'global::System.Runtime
+.Versioning.TargetFrameworkAttribute' en double [J:\projects\asp.net-nextjs\Cla
+ssLibrary1\ClassLibrary1.csproj]
+    2 Avertissement(s)
+    1 Erreur(s)
+Temps écoulé 00:00:01.83
