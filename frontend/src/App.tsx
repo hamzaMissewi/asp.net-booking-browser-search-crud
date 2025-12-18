@@ -1,153 +1,135 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import type { Book, AiSearchResult } from './types'
-import { aiSearch, createBook, deleteBook, listBooks, updateBook } from './api'
-
-function BookForm({ initial, onSubmit, onCancel }: { initial?: Partial<Book>, onSubmit: (input: Omit<Book, 'id'>) => void, onCancel?: () => void }) {
-  const [title, setTitle] = useState(initial?.title ?? '')
-  const [author, setAuthor] = useState(initial?.author ?? '')
-  const [isbn, setIsbn] = useState(initial?.isbn ?? '')
-  const [description, setDescription] = useState(initial?.description ?? '')
-  const [year, setYear] = useState(initial?.year?.toString() ?? '')
-  const [genre, setGenre] = useState(initial?.genre ?? '')
-
-  return (
-    <form onSubmit={(e) => { e.preventDefault(); onSubmit({ title, author, isbn, description, year: year ? Number(year) : null, genre }) }} style={{ display: 'grid', gap: 8, maxWidth: 500 }}>
-      <input placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} required />
-      <input placeholder="Author" value={author} onChange={e => setAuthor(e.target.value)} required />
-      <input placeholder="ISBN" value={isbn ?? ''} onChange={e => setIsbn(e.target.value)} />
-      <input placeholder="Genre" value={genre ?? ''} onChange={e => setGenre(e.target.value)} />
-      <input placeholder="Year" type="number" value={year ?? ''} onChange={e => setYear(e.target.value)} />
-      <textarea placeholder="Description" value={description ?? ''} onChange={e => setDescription(e.target.value)} />
-      <div style={{ display: 'flex', gap: 8 }}>
-        <button type="submit">Save</button>
-        {onCancel && <button type="button" onClick={onCancel}>Cancel</button>}
-      </div>
-    </form>
-  )
-}
+import React, { useState } from 'react'
+import { Chatbot } from './components/Chatbot'
+import { BooksManager } from './components/BooksManager'
 
 export default function App() {
-  const [books, setBooks] = useState<Book[]>([])
-  const [q, setQ] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const [editing, setEditing] = useState<Book | null>(null)
-  const [aiQuery, setAiQuery] = useState('')
-  const [aiResults, setAiResults] = useState<AiSearchResult[] | null>(null)
-
-  const reload = async () => {
-    setLoading(true); setError(null)
-    try {
-      const data = await listBooks({ q })
-      setBooks(data)
-    } catch (e: any) {
-      setError(e.message ?? 'Failed to load')
-    } finally { setLoading(false) }
-  }
-
-  useEffect(() => { reload() }, [])
-
-  const onCreate = async (input: Omit<Book, 'id'>) => {
-    setLoading(true); setError(null)
-    try {
-      await createBook(input)
-      await reload()
-    } catch (e: any) { setError(e.message ?? 'Create failed') } finally { setLoading(false) }
-  }
-
-  const onUpdate = async (input: Omit<Book, 'id'> & { id: number }) => {
-    setLoading(true); setError(null)
-    try {
-      await updateBook(input.id, input)
-      setEditing(null)
-      await reload()
-    } catch (e: any) { setError(e.message ?? 'Update failed') } finally { setLoading(false) }
-  }
-
-  const onDelete = async (id: number) => {
-    if (!confirm('Delete this book?')) return
-    setLoading(true); setError(null)
-    try { await deleteBook(id); await reload() } catch (e: any) { setError(e.message ?? 'Delete failed') } finally { setLoading(false) }
-  }
-
-  const doAiSearch = async () => {
-    setLoading(true); setError(null)
-    try { const res = await aiSearch(aiQuery); setAiResults(res) } catch (e: any) { setError(e.message ?? 'AI search failed') } finally { setLoading(false) }
-  }
-
-  const formInitial = useMemo<Partial<Book> | undefined>(() => editing ?? undefined, [editing])
+  const [activeTab, setActiveTab] = useState<'chat' | 'manage'>('chat')
 
   return (
-    <div style={{ fontFamily: 'system-ui, Arial, sans-serif', padding: 16, display: 'grid', gap: 16 }}>
-      <h2>Books CRUD + AI Search</h2>
-      {error && <div style={{ color: 'crimson' }}>{error}</div>}
-
-      <section style={{ display: 'grid', gap: 8 }}>
-        <h3>Create new</h3>
-        <BookForm onSubmit={onCreate} />
-      </section>
-
-      <section style={{ display: 'grid', gap: 8 }}>
-        <h3>List</h3>
-        <div style={{ display: 'flex', gap: 8 }}>
-          <input placeholder="Search..." value={q} onChange={e => setQ(e.target.value)} />
-          <button onClick={reload} disabled={loading}>Search</button>
+    <div style={{
+      fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+      minHeight: '100vh',
+      backgroundColor: '#f5f7fa'
+    }}>
+      {/* Header */}
+      <header style={{
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        color: 'white',
+        padding: '24px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <h1 style={{ margin: 0, fontSize: '28px', fontWeight: '700' }}>
+            📚 Books Management System
+          </h1>
+          <p style={{ margin: '8px 0 0 0', opacity: 0.9, fontSize: '14px' }}>
+            AI-powered book discovery and management
+          </p>
         </div>
-        {loading && <div>Loading...</div>}
-        <table style={{ borderCollapse: 'collapse', width: '100%' }}>
-          <thead>
-            <tr>
-              <th style={{ textAlign: 'left', borderBottom: '1px solid #ddd' }}>Title</th>
-              <th style={{ textAlign: 'left', borderBottom: '1px solid #ddd' }}>Author</th>
-              <th style={{ textAlign: 'left', borderBottom: '1px solid #ddd' }}>Genre</th>
-              <th style={{ textAlign: 'left', borderBottom: '1px solid #ddd' }}>Year</th>
-              <th style={{ borderBottom: '1px solid #ddd' }}>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {books.map(b => (
-              <tr key={b.id}>
-                <td style={{ borderBottom: '1px solid #eee' }}>{b.title}</td>
-                <td style={{ borderBottom: '1px solid #eee' }}>{b.author}</td>
-                <td style={{ borderBottom: '1px solid #eee' }}>{b.genre ?? ''}</td>
-                <td style={{ borderBottom: '1px solid #eee' }}>{b.year ?? ''}</td>
-                <td style={{ borderBottom: '1px solid #eee' }}>
-                  <button onClick={() => setEditing(b)}>Edit</button>{' '}
-                  <button onClick={() => onDelete(b.id)}>Delete</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      </header>
 
-        {editing && (
+      {/* Navigation Tabs */}
+      <div style={{
+        borderBottom: '1px solid #ddd',
+        backgroundColor: 'white',
+        position: 'sticky',
+        top: 0,
+        zIndex: 10,
+        boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          display: 'flex',
+          gap: '4px',
+          padding: '0 24px'
+        }}>
+          <button
+            onClick={() => setActiveTab('chat')}
+            style={{
+              padding: '16px 24px',
+              border: 'none',
+              backgroundColor: 'transparent',
+              borderBottom: activeTab === 'chat' ? '3px solid #667eea' : '3px solid transparent',
+              color: activeTab === 'chat' ? '#667eea' : '#666',
+              fontWeight: activeTab === 'chat' ? '600' : '400',
+              cursor: 'pointer',
+              fontSize: '15px',
+              transition: 'all 0.2s'
+            }}
+          >
+            💬 AI Chat Assistant
+          </button>
+          <button
+            onClick={() => setActiveTab('manage')}
+            style={{
+              padding: '16px 24px',
+              border: 'none',
+              backgroundColor: 'transparent',
+              borderBottom: activeTab === 'manage' ? '3px solid #667eea' : '3px solid transparent',
+              color: activeTab === 'manage' ? '#667eea' : '#666',
+              fontWeight: activeTab === 'manage' ? '600' : '400',
+              cursor: 'pointer',
+              fontSize: '15px',
+              transition: 'all 0.2s'
+            }}
+          >
+            📖 Manage Books
+          </button>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <main style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '32px 24px'
+      }}>
+        {activeTab === 'chat' && (
           <div>
-            <h4>Edit</h4>
-            <BookForm initial={formInitial} onSubmit={(input) => onUpdate({ ...input, id: editing.id })} onCancel={() => setEditing(null)} />
+            <div style={{ marginBottom: '20px' }}>
+              <h2 style={{ margin: '0 0 8px 0', fontSize: '24px', fontWeight: '600' }}>
+                AI Book Assistant
+              </h2>
+              <p style={{ margin: 0, color: '#666', fontSize: '14px' }}>
+                Ask me anything about books! I can help you find recommendations, search for specific titles, or chat about what you'd like to read.
+              </p>
+            </div>
+            <Chatbot />
           </div>
         )}
-      </section>
 
-      <section style={{ display: 'grid', gap: 8 }}>
-        <h3>AI Search</h3>
-        <div style={{ display: 'flex', gap: 8 }}>
-          <input placeholder="Natural language (e.g., clean code books)" value={aiQuery} onChange={e => setAiQuery(e.target.value)} />
-          <button onClick={doAiSearch} disabled={loading || !aiQuery.trim()}>Ask AI</button>
-        </div>
-        {aiResults && (
+        {activeTab === 'manage' && (
           <div>
-            <p>Results: {aiResults.length}</p>
-            <ul>
-              {aiResults.map(r => (
-                <li key={r.book.id}>
-                  <strong>{r.book.title}</strong> by {r.book.author} — score {r.score.toFixed(2)}
-                  {r.reason && <div style={{ color: '#666' }}>{r.reason}</div>}
-                </li>
-              ))}
-            </ul>
+            <div style={{ marginBottom: '20px' }}>
+              <h2 style={{ margin: '0 0 8px 0', fontSize: '24px', fontWeight: '600' }}>
+                Manage Your Library
+              </h2>
+              <p style={{ margin: 0, color: '#666', fontSize: '14px' }}>
+                Create, edit, search, and organize your book collection.
+              </p>
+            </div>
+            <BooksManager />
           </div>
         )}
-      </section>
+      </main>
+
+      {/* Footer */}
+      <footer style={{
+        borderTop: '1px solid #ddd',
+        backgroundColor: 'white',
+        padding: '24px',
+        marginTop: '48px',
+        textAlign: 'center',
+        color: '#666',
+        fontSize: '14px'
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <p style={{ margin: 0 }}>
+            Built with ASP.NET Core + React + OpenAI
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }

@@ -41,3 +41,26 @@ export async function aiSearch(query: string): Promise<AiSearchResult[]> {
   if (!res.ok) throw new Error('AI search failed')
   return res.json()
 }
+
+export interface ChatMessage {
+  role: 'user' | 'assistant'
+  content: string
+}
+
+export interface ChatResponse {
+  message: string
+  recommendedBookIds?: number[]
+}
+
+export async function sendChatMessage(messages: ChatMessage[]): Promise<ChatResponse> {
+  const res = await fetch('/api/chat', { 
+    method: 'POST', 
+    headers: { 'Content-Type': 'application/json' }, 
+    body: JSON.stringify({ messages }) 
+  })
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ error: 'Chat request failed' }))
+    throw new Error(error.error || 'Chat request failed')
+  }
+  return res.json()
+}

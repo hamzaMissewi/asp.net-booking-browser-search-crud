@@ -1,0 +1,13 @@
+cd BooksApi && dotnet restore
+
+cd BooksApi && dotnet build
+
+``` Shell Script
+cd BooksApi && dotnet restore
+```
+``` Shell Script
+dotnet --list-sdks
+```
+
+
+cd BooksApi && dotnet watch run

@@ -3,8 +3,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BooksApi.Data;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+public class AppDbContext : DbContext
 {
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+    }
+
     public DbSet<Book> Books => Set<Book>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -4,8 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BooksApi.Services;
 
-public class SimpleBookSearchService(AppDbContext db) : IBookSearchService
+public class SimpleBookSearchService : IBookSearchService
 {
+    private readonly AppDbContext _db;
+
+    public SimpleBookSearchService(AppDbContext db)
+    {
+        _db = db;
+    }
+
     public async Task<IReadOnlyList<AiSearchResult>> SearchAsync(string query, CancellationToken ct = default)
     {
         if (string.IsNullOrWhiteSpace(query))
@@ -18,7 +25,7 @@ public class SimpleBookSearchService(AppDbContext db) : IBookSearchService
             .ToArray();
 
         // Fetch candidate set (simple: all, could be optimized)
-        var all = await db.Books.AsNoTracking().ToListAsync(ct);
+        var all = await _db.Books.AsNoTracking().ToListAsync(ct);
 
         double Score(Book b)
         {
@@ -51,14 +58,16 @@ public class SimpleBookSearchService(AppDbContext db) : IBookSearchService
         for (var i = 0; i < ranked.Count; i++)
         {
             var b = ranked[i].Book;
+            var matchedTerms = terms.Where(t =>
+                (b.Title?.Contains(t, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (b.Author?.Contains(t, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (b.Genre?.Contains(t, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (b.Description?.Contains(t, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (!string.IsNullOrEmpty(b.Isbn) && b.Isbn.Contains(t, StringComparison.OrdinalIgnoreCase))).ToList();
+
             ranked[i] = ranked[i] with
             {
-                Reason = $"Matched on: {string.Join(", ", terms.Where(t =>
-                    (b.Title?.Contains(t, StringComparison.OrdinalIgnoreCase) ?? false) ||
-                    (b.Author?.Contains(t, StringComparison.OrdinalIgnoreCase) ?? false) ||
-                    (b.Genre?.Contains(t, StringComparison.OrdinalIgnoreCase) ?? false) ||
-                    (b.Description?.Contains(t, StringComparison.OrdinalIgnoreCase) ?? false) ||
-                    (!string.IsNullOrEmpty(b.Isbn) && b.Isbn.Contains(t, StringComparison.OrdinalIgnoreCase))))}"
+                Reason = $"Matched on: {string.Join(", ", matchedTerms)}"
             };
         }
 
