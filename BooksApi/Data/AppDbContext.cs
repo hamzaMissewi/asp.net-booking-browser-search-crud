@@ -5,9 +5,7 @@ namespace BooksApi.Data;
 
 public class AppDbContext : DbContext
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-    {
-    }
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options){}
 
     public DbSet<Book> Books => Set<Book>();
 
@@ -23,4 +21,29 @@ public class AppDbContext : DbContext
             b.HasIndex(p => new { p.Title, p.Author });
         });
     }
+
+
+      public DbSet<Game> Games => Set<Game>();
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Game>(g =>
+        {
+            g.Property(p => p.Title).IsRequired().HasMaxLength(200);
+            g.Property(p => p.Developer).IsRequired().HasMaxLength(150);
+            g.Property(p => p.Publisher).HasMaxLength(150);
+            g.Property(p => p.Description).HasMaxLength(1000);
+            g.Property(p => p.Genre).HasMaxLength(100);
+            g.Property(p => p.Price).HasColumnType("decimal(18,2)");
+            g.Property(p => p.DiscountPercentage).HasColumnType("decimal(5,2)");
+            
+            // Indexes for common queries
+            g.HasIndex(p => p.Title);
+            g.HasIndex(p => p.Developer);
+            g.HasIndex(p => p.ReleaseDate);
+            g.HasIndex(p => p.Price);
+            g.HasIndex(p => p.Rating);
+            g.HasIndex(p => p.Genre);
+        });
+    }
+
 }
